@@ -1,6 +1,6 @@
 # Rendu Séance 1
 
-**Nom et prénom :** Nassous Abdoulaye Nassour
+**Nom et prénom :** NGARTOBAYE OUMAROU BILLY
 
 ## Résumé de la séance
 Cette séance a permis de mettre en place une infrastructure de stockage objet locale utilisant Docker et MinIO. Nous avons appris à manipuler des conteneurs, à configurer des accès sécurisés via `mc` (MinIO Client) et à automatiser le transfert de données (référentiel Anfa) à l'aide d'un script Python utilisant l'API S3 (via `boto3`).
