@@ -1,0 +1,14 @@
+# Stage 1 : Construction (on installe les paquets)
+FROM python:3.11-slim AS builder
+WORKDIR /app
+RUN pip install --user pandas boto3
+
+# Stage 2 : Exécution (image finale légère)
+FROM python:3.11-slim
+WORKDIR /app
+# On copie uniquement les bibliothèques installées du stage builder
+COPY --from=builder /root/.local /root/.local
+COPY analyse_referentiel.py .
+ENV PATH=/root/.local/bin:$PATH
+CMD ["python", "analyse_referentiel.py"]
+
