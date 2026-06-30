@@ -26,3 +26,5 @@ for fichier in sorted(dossier.glob("*.csv")):
     cle = f"referentiel/{fichier.name}"
     s3.upload_file(str(fichier), BUCKET, cle)
     print(f"[OK] {fichier.name} → s3://{BUCKET}/{cle}")
+
+    
